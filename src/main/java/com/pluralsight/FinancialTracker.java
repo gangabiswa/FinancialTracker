@@ -1,7 +1,13 @@
 package com.pluralsight;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -52,6 +58,26 @@ public class FinancialTracker {
     }
 
     public static void loadTransactions(String fileName) {
+        try {
+            BufferedReader buffReader =new BufferedReader(new FileReader(fileName));
+            String line;
+            while ((line = buffReader.readLine())!=null) {
+                String[] parts = line.split("\\|");
+                if (parts.length == 5){
+                    String date = parts[0].trim();
+                    String time = parts[1].trim();
+                    String type = parts[2].trim();
+                    String vendor = parts[3].trim();
+                    double price = Double.parseDouble(parts[4].trim());
+                    transactions.add(new Transaction(date, time, type, vendor,price));
+
+                }
+            }
+            buffReader.close();
+        } catch (Exception e){
+            System.out.println("Error loading inventory:" + e.getMessage());
+        }
+
         // This method should load transactions from a file with the given file name.
         // If the file does not exist, it should be created.
         // The transactions should be stored in the `transactions` ArrayList.
@@ -63,6 +89,35 @@ public class FinancialTracker {
     }
 
     private static void addDeposit(Scanner scanner) {
+        System.out.println("Enter the date and time (yyyy-MM-dd HH:mm:ss):");
+        String dateInput = scanner.nextLine().trim();
+
+        try {
+            LocalDateTime dateTime =LocalDateTime.parse(dateInput, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+
+        } catch (DateTimeParseException e) {
+            System.out.println(" Invalid date/time format. please use yyyy-MM-dd HH:mm:ss ");
+        }
+
+        System.out.println("Enter the vendor:");
+        String vendor = scanner.nextLine().trim();
+
+        System.out.println("Enter the amount:");
+        double amount = 0;
+
+        try {
+            amount = Double.parseDouble(scanner.nextLine());
+            if (amount <= 0) ;
+            {
+                System.out.println(" Amount Deposit must be positive");
+            }
+        } catch (Exception e) {
+            System.out.println("invalid amount format. please enter the valid number ");
+            return;
+        }
+        Deposit deposit = new Deposit(dateTime.toLocalDate(), );
+
+
         // This method should prompt the user to enter the date, time, vendor, and amount of a deposit.
         // The user should enter the date and time in the following format: yyyy-MM-dd HH:mm:ss
         // The amount should be a positive number.
