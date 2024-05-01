@@ -17,35 +17,57 @@ public class Transaction {
         this.type = type;
         this.date = date;
     }
+
     public LocalDate getDate() {
         return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
     public LocalTime getTime() {
         return time;
     }
 
+    public void setTime(LocalTime time) {
+        this.time = time;
+    }
+
     public String getType() {
         return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getVendor() {
         return vendor;
     }
 
+    public void setVendor(String vendor) {
+        this.vendor = vendor;
+    }
+
     public Double getPrice() {
         return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     @Override
     public String toString() {
         return "Transaction{" +
-                "vendor='" + vendor + '\'' +
+                "date=" + date +
+                ", time=" + time +
                 ", type='" + type + '\'' +
+                ", vendor='" + vendor + '\'' +
+                ", price=" + price +
                 '}';
     }
-
-
 }
 
 
