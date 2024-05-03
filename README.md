@@ -9,8 +9,6 @@ Its primary purpose is to provide individuals with a simple tool to track their 
 
 ## User Stories
 
-List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
-
 - As a user, I want to be able to input my financial transactions, so that I can track my income and expenses accurately.
 - As a user, I want to view a summary of my transactions, so that I can understand my spending patterns.
 - As a user, I want to generate reports for specific time periods, so that I can analyze my financial activities over time.
@@ -43,18 +41,6 @@ Follow these steps to get your application running within IntelliJ IDEA:
 - Java: Version 17.
 - No additional libraries or frameworks used in the project.
 
-## Demo
-
-Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
-
-![Application Screenshot](path/to/your/screenshot.png)
-
-## Future Work
-
-Outline potential future enhancements or functionalities you might consider adding:
-
-- Add support for different currency types and exchange rates.
-- Improvement of current functionalities.
 
 ## Resources
 

@@ -78,7 +78,6 @@ public class FinancialTracker {
         } catch (Exception e) {
             System.out.println("Error loading inventory:" + e.getMessage());
         }
-
     }
 
     private static void addDeposit(Scanner scanner) {
@@ -167,8 +166,6 @@ public class FinancialTracker {
             transactions.add(payment);
             System.out.println("payment added successfully");
         }
-
-
         //write deposit info to transaction file.
         try {
             BufferedWriter buffwriter = new BufferedWriter(new FileWriter(FILE_NAME, true));
@@ -226,7 +223,7 @@ public class FinancialTracker {
             String type = tranz.getType();
             double amount = tranz.getPrice();
 
-            System.out.printf(" %s | %s | %s-10s | %s | %.2f%n ", date, time, vendor, type, amount);
+            System.out.printf(" %s | %s | %s | %s | %.2f%n ", date, time, vendor, type, amount);
         }
     }
 
@@ -340,20 +337,16 @@ public class FinancialTracker {
             System.out.println("No result Found try again. ");
         }
     }
-
     private static void filterTransactionsByVendor(String vendor) {
         boolean foundTranscation = false;
         for (Transaction transaction : transactions) {
             if (vendor.equals(transaction.getVendor())) {
                 System.out.println(transaction.getDate() + "|" + transaction.getTime() + "|" + transaction.getType() + "|" + transaction.getVendor() + "|" + transaction.getPrice() + "|");
                 foundTranscation = true;
-
-
             }
         }
         if (!foundTranscation) {
             System.out.println("no vendor found, please try again");
-
         }
     }
 }
