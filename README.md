@@ -1,8 +1,9 @@
-# Project Title
+# Financial Tracker
 
 ## Description of the Project
-
-Briefly describe what this Java console application does. Mention its purpose and who the intended users are. Explain the main functionality and what problems it aims to solve.
+Financial Tracker is a Java console application designed to help users manage their financial transactions.
+The application allows users to add deposits, make payments, view transaction history, and generate reports based on different criteria.
+Its primary purpose is to provide individuals with a simple tool to track their income and expenses efficiently.
 
 ![Class Diagram](path/to/your/class_diagram.png)
 
@@ -10,12 +11,17 @@ Briefly describe what this Java console application does. Mention its purpose an
 
 List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
 
-- As a user, I want to be able to input my data, so that the application can process it accordingly.
-- As a user, I want to receive immediate feedback, so I can understand what to do next.
+- As a user, I want to be able to input my financial transactions, so that I can track my income and expenses accurately.
+- As a user, I want to view a summary of my transactions, so that I can understand my spending patterns.
+- As a user, I want to generate reports for specific time periods, so that I can analyze my financial activities over time.
 
 ## Setup
 
-Instructions on how to set up and run the project using IntelliJ IDEA.
+-Open IntelliJ IDEA.
+-Select "Open" and navigate to the directory where you cloned or downloaded the project.
+-After the project opens, wait for IntelliJ to index the files and set up the project.
+-Find the main class with the public static void main(String[] args) method.
+-Right-click on the file and select 'Run 'YourMainClassName.main()'' to start the application.
 
 ### Prerequisites
 
@@ -34,8 +40,8 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Technologies Used
 
-- Java: Mention the version you are using.
-- Any additional libraries or frameworks used in the project.
+- Java: Version 17.
+- No additional libraries or frameworks used in the project.
 
 ## Demo
 
@@ -47,7 +53,7 @@ Include screenshots or GIFs that show your application in action. Use tools like
 
 Outline potential future enhancements or functionalities you might consider adding:
 
-- Additional feature to be developed.
+- Add support for different currency types and exchange rates.
 - Improvement of current functionalities.
 
 ## Resources
@@ -57,14 +63,10 @@ List resources such as tutorials, articles, or documentation that helped you dur
 - [Java Programming Tutorial](https://www.example.com)
 - [Effective Java](https://www.example.com)
 
-## Team Members
-
-- **Name 1** - Specific contributions or roles.
-- **Name 2** - Specific contributions or roles.
 
 ## Thanks
 
 Express gratitude towards those who provided help, guidance, or resources:
 
-- Thank you to [Mentor's Name] for continuous support and guidance.
-- A special thanks to all teammates for their dedication and teamwork.
+- Thank you to [Raymond] for continuous support and guidance.
+- A special thanks to Husnain Arif, Manvir, Anita for their help.
